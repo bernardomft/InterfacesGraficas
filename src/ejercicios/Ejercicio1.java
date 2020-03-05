@@ -11,7 +11,7 @@ public class Ejercicio1 extends JFrame
 
 	JTextField txtinicio = new JTextField(40);
 	JTextField txtdestino = new JTextField(40);
-	
+	JPanel panel = new JPanel();
 	
 	public Ejercicio1()
 	{
@@ -50,13 +50,17 @@ public class Ejercicio1 extends JFrame
 				}
 				else
 				{
-				txtdestino.setBackground(Color.GREEN);
-				txtdestino.setForeground(Color.white);
+					txtdestino.setBackground(Color.GREEN);
+					txtdestino.setForeground(Color.white);
+					//ventana emergente
+					String str = JOptionPane.showInputDialog(panel, "Operacion realizada con éxito","Información",JOptionPane.YES_NO_CANCEL_OPTION);
+					// JOptionpane(sobre que queremos que se ponga,texto, titulo de la ventana, opciones de la ventana)
+					System.out.println(str);
 				}
 			}
 		});
 		
-		JPanel panel = new JPanel();
+		
 		panel.setLayout(new GridLayout(2,3));
 		
 		panel.add(txtinicio);
