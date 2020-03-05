@@ -1,17 +1,10 @@
 package ejercicios;
 
-import java.awt.BorderLayout;
-import java.awt.Color;
-import java.awt.GridLayout;
-import java.awt.TextField;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import java.awt.*;
+import java.awt.event.*;
 
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.JTextField;
+import javax.swing.*;
+
 
 public class Ejercicio1 extends JFrame
 {
@@ -74,12 +67,23 @@ public class Ejercicio1 extends JFrame
 		panel.add(new JLabel(""));
 		
 		add(panel, BorderLayout.CENTER);
+		
+		//Image icono = new Image();
+		
+		//Image icono = Toolkit.getDefaultToolkit().getImage(getClass().getResource("./img/icono1.png"));
+		//setIconImage(new ImageIcon(getClass().getResource("../../img/icono3.png")).getImage());  //este metodo no me funciona
+		
+		ImageIcon icono = new ImageIcon("./img/icono3.png");
+		Image imagen = icono.getImage();  //una forma de hacerlo
+		setIconImage(imagen);
+		
 		setSize(600,100);
 		setBackground(Color.BLACK);
 		setLocationRelativeTo(null); 				
 		setResizable(false); 						
 		setVisible(true); 	
 	}
+	
 	public static void main(String[] args) 
 	{
 		Ejercicio1 obj = new Ejercicio1();
